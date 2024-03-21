@@ -21,7 +21,9 @@
             <div class="navbar__chat-container">
               <div class="navbar__inner-chat-container">
                 <a class="navbar__num">
-                  <div class="navbar__phone-svg-container">
+                  <div
+                    class="navbar__phone-svg-container navbar__mobile-phone-svg"
+                  >
                     <img src="assets/images/phone.svg" />
                   </div>
                   1-708-246-1212
@@ -43,15 +45,38 @@
                 </div>
                 <div class="navbar__cart-link-container">
                   <div class="navbar__cart-num">5</div>
-                  <a href="#" class="navbar__cart-link navbar__link"> </a>
+                  <a href="#" class="navbar__cart-link navbar__link"
+                    ><img
+                      src="assets/images/shoppingbag.svg"
+                      alt="shopping bag"
+                  /></a>
                 </div>
                 <div class="navbar__search-link-container">
                   <a
                     href="#"
                     class="navbar__search-link navbar__link navbar__mobile-search-link navbar__search-svg"
                   >
+                    <img
+                      src="assets/images/search.svg"
+                      alt="magnifying glass"
+                    />
                   </a>
                 </div>
+                <button
+                  class="navbar__hamburger"
+                  aria-label="Menu"
+                  aria-controls="navigation"
+                  aria-expanded="false"
+                >
+                  <div
+                    class="hamburger-icon navbar__mobile-toggle-svg"
+                    aria-hidden="true"
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -518,4 +543,5 @@
       </section>
     </footer>
   </body>
+  <script src="assets/js/main.js"></script>
 </html>
