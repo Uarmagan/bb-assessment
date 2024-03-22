@@ -1492,6 +1492,9 @@ header {
   background-color: white;
 }
 
+.footer .container {
+  padding: 0 30px;
+}
 .footer__top-nav {
   padding: 50px 0;
 }
