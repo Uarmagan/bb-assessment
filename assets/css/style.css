@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Barlow', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -46,7 +47,12 @@ img {
 header {
   background: #fff;
 }
-
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
 /* 
 ////////////////////////////////////////////////////////////////
 //////////////////HIDING DESKTOP MENU///////////////////////////
@@ -574,6 +580,7 @@ header {
 */
 .hero__carousel-wrapper {
   display: block;
+  overflow: hidden;
 }
 
 .hero__carousel-container,
@@ -583,6 +590,11 @@ header {
 
 .hero__carousel-slide {
   display: block;
+}
+
+.hero__carousel-wrapper,
+.hero__carousel {
+  overflow: hidden; /* Prevents overflow of inner content */
 }
 
 .hero__carousel-slide {
@@ -769,7 +781,7 @@ header {
   }
 
   .hero__slide-button {
-    display: block; /* Show buttons on larger screens */
+    display: block;
   }
 }
 
@@ -1585,6 +1597,40 @@ header {
 .footer__nav-list-store-hours:focus {
   text-decoration: underline;
   color: #6495ed;
+}
+
+.footer__nav-social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__nav-social-links a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  margin-top: 12px;
+}
+
+.footer__facebook {
+  background-color: #b8d1ed;
+}
+
+.footer__twitter {
+  background-color: #d5dc91;
+}
+
+.footer__instagram {
+  background-color: #ffcccc;
+}
+
+.footer__tiktok {
+  background-color: #ffefbc;
 }
 
 .footer__copyright ul {
