@@ -1557,6 +1557,10 @@ header {
   background-color: #ffcccc;
 }
 
+.footer__nav-list-svg-yellow {
+  background-color: #ffefbc;
+}
+
 .footer__nav-list-item-blue {
   border-bottom: 2px solid #b8d1ed;
 }
@@ -1612,8 +1616,8 @@ header {
   color: black;
   border: 1px solid transparent;
   border-radius: 50%;
-  height: 16px;
-  width: 16px;
+  height: 32px;
+  width: 32px;
   display: flex;
   justify-content: center;
   padding: 6px;
