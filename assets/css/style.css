@@ -572,7 +572,25 @@ header {
 //////////////////HERO SECTION STYLES///////////////////////////
 ////////////////////////////////////////////////////////////////
 */
+.hero__carousel-wrapper {
+  display: block;
+}
+
+.hero__carousel-container,
+.hero__slide-button {
+  display: none;
+}
+
 .hero__carousel-slide {
+  display: block;
+}
+
+.hero__carousel-slide {
+  flex: 0 0 100%; /* Each slide takes full width */
+  position: relative; /* Required for positioning the slide content */
+}
+
+.hero__carousel {
   position: relative;
 }
 
@@ -648,7 +666,6 @@ header {
   padding: 10px 0;
 }
 
-.hero__slide-button,
 .hero__inner-slide-button {
   background-color: #d5dc91 !important;
   border: 1px solid transparent !important;
@@ -665,6 +682,35 @@ header {
   text-decoration: underline;
 }
 
+.hero__slide-button {
+  color: #ffffff;
+  background-color: #b8d1ed;
+  border: 1px solid transparent !important;
+  padding: 18px 15px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: none; /* Hidden on smaller screens */
+}
+
+.hero__slide-left-button {
+  left: 10px;
+}
+
+.hero__slide-right-button {
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.hero__carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
 @media (min-width: 768px) {
   .hero__carousel-img {
     height: 400px;
@@ -677,13 +723,16 @@ header {
 @media (min-width: 1024px) {
   .hero__carousel {
     background-color: #ffffff;
-    background-image: url('../BB Assets/Leaf\ Pattern\ Tall.jpg');
+    background-image: url('assets/images/leafpatterntall.jpg');
     min-height: 585px;
+    overflow: hidden;
+    position: relative;
   }
 
   .hero__carousel-slide {
     position: relative;
     min-height: 550px;
+    flex: 0 0 100%; /* Each slide takes full width of the carousel */
   }
   .hero__carousel-img {
     height: 550px;
@@ -717,6 +766,10 @@ header {
     font-weight: 400;
     text-align: center;
     padding-top: 15px;
+  }
+
+  .hero__slide-button {
+    display: block; /* Show buttons on larger screens */
   }
 }
 
